@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-392fb024-581d-41ad-ad8d-21ff3e8f9af9/styles.css">
+<script src="_ds/industry-392fb024-581d-41ad-ad8d-21ff3e8f9af9/_ds_bundle.js"></script>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},startup:{typeset:false},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-700); }
+  code, pre, .mono { font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace; }
+  mjx-container { color: var(--color-text); }
+  input[type=range]{ accent-color: var(--color-accent); }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="min-height:100%;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+
+  <nav style="position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:14px 32px;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider)">
+    <span style="font-family:var(--font-heading);font-weight:600;font-size:19px;letter-spacing:-0.01em">M. Ayoub Aichouni</span>
+    <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);border-left:1px solid var(--color-divider);padding-left:20px" data-i18n="role"></span>
+    <span style="flex:1"></span>
+    <a href="#summary" style="font-size:13px;text-decoration:none;color:var(--color-text)" data-i18n="navSummary"></a>
+    <a href="#project" style="font-size:13px;text-decoration:none;color:var(--color-text)" data-i18n="navCase"></a>
+    <a href="#skills" style="font-size:13px;text-decoration:none;color:var(--color-text)" data-i18n="navCap"></a>
+    <button ref="{{ langBtnRef }}" onClick="{{ toggle }}" class="btn btn-secondary" style="font-size:12px;padding:5px 12px;min-height:0;letter-spacing:0.08em">DE</button>
+  </nav>
+
+  <div style="max-width:960px;margin:0 auto;padding:0 32px 96px">
+
+    <!-- ═══ HERO / SUMMARY ═══ -->
+    <header id="summary" style="padding:88px 0 56px;background-image:linear-gradient(var(--color-divider) 1px,transparent 1px),linear-gradient(90deg,var(--color-divider) 1px,transparent 1px);background-size:34px 34px;background-position:-1px -1px">
+      <div style="background:var(--color-bg);display:inline-block;padding:2px 12px 2px 0;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent)" data-i18n="heroKicker"></div>
+      <h1 style="font-size:clamp(38px,6.5vw,64px);line-height:1.03;letter-spacing:-0.02em;margin:14px 0 0;max-width:18ch" data-i18n="heroTitle"></h1>
+      <p style="font-size:19px;line-height:1.5;max-width:60ch;margin:22px 0 0;color:color-mix(in srgb,var(--color-text) 82%,transparent)" data-i18n="heroLead"></p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px">
+        <span class="tag tag-outline" data-i18n="tag1"></span>
+        <span class="tag tag-outline" data-i18n="tag2"></span>
+        <span class="tag tag-outline" data-i18n="tag3"></span>
+        <span class="tag tag-outline" data-i18n="tag4"></span>
+        <span class="tag tag-outline" data-i18n="tag5"></span>
+      </div>
+      <p style="font-size:13px;margin-top:36px;color:color-mix(in srgb,var(--color-text) 55%,transparent)" data-i18n="heroNote"></p>
+    </header>
+
+    <!-- ═══ FEATURED CASE STUDY ═══ -->
+    <section id="project" style="padding-top:24px">
+      <div style="display:flex;align-items:baseline;gap:16px;border-top:2px solid var(--color-text);padding-top:14px;margin-bottom:8px">
+        <span style="font-family:var(--font-heading);font-size:15px;color:var(--color-accent)">01</span>
+        <h6 style="margin:0" data-i18n="caseKicker"></h6>
+      </div>
+      <h2 style="font-size:36px;margin:4px 0 6px;max-width:22ch" data-i18n="caseTitle"></h2>
+      <p style="font-size:16px;max-width:66ch;color:color-mix(in srgb,var(--color-text) 80%,transparent)" data-i18n="caseObjective"></p>
+
+      <!-- 1 -->
+      <div style="margin-top:44px">
+        <h3 style="font-size:23px;margin-bottom:10px"><span style="color:var(--color-accent);font-size:15px;margin-right:10px">1</span><span data-i18n="s1h"></span></h3>
+        <p style="max-width:66ch" data-i18n="s1intro"></p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px">
+          <div class="blueprint" style="padding:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div class="card-kicker" data-i18n="a1k"></div>
+            <div style="font-family:var(--font-heading);font-size:18px;margin:2px 0 4px" data-i18n="a1t"></div>
+            <p style="margin:0;font-size:13px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="a1b"></p>
+          </div>
+          <div class="blueprint" style="padding:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div class="card-kicker" data-i18n="a2k"></div>
+            <div style="font-family:var(--font-heading);font-size:18px;margin:2px 0 4px" data-i18n="a2t"></div>
+            <p style="margin:0;font-size:13px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="a2b"></p>
+          </div>
+          <div class="blueprint" style="padding:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div class="card-kicker" data-i18n="a3k"></div>
+            <div style="font-family:var(--font-heading);font-size:18px;margin:2px 0 4px" data-i18n="a3t"></div>
+            <p style="margin:0;font-size:13px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="a3b"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div style="margin-top:44px">
+        <h3 style="font-size:23px;margin-bottom:10px"><span style="color:var(--color-accent);font-size:15px;margin-right:10px">2</span><span data-i18n="s2h"></span></h3>
+        <p style="max-width:66ch" data-i18n="s2intro"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq1"></figure>
+        <p style="max-width:66ch" data-i18n="s2rearr"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq2"></figure>
+        <p style="max-width:66ch;font-size:14px;color:color-mix(in srgb,var(--color-text) 60%,transparent)" data-i18n="s2where"></p>
+      </div>
+
+      <!-- 3 -->
+      <div style="margin-top:44px">
+        <h3 style="font-size:23px;margin-bottom:10px"><span style="color:var(--color-accent);font-size:15px;margin-right:10px">3</span><span data-i18n="s3h"></span></h3>
+        <p style="max-width:66ch" data-i18n="s3intro"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq3"></figure>
+        <p style="max-width:66ch" data-i18n="s3apply"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq4"></figure>
+
+        <!-- INTERACTIVE PLOT -->
+        <div class="blueprint" style="margin-top:26px;padding:0"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--color-divider)">
+            <span style="font-family:var(--font-heading);font-size:16px;letter-spacing:0.01em" data-i18n="plotTitle"></span>
+            <span class="tag tag-accent" data-i18n="plotTag"></span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:0">
+            <div style="border-right:1px solid var(--color-divider);padding:14px">
+              <canvas ref="{{ canvasRef }}" style="width:100%;height:300px;display:block"></canvas>
+            </div>
+            <div style="padding:20px 22px;display:flex;flex-direction:column;gap:20px">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline"><label style="font-size:12px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="lblH"></label><span class="mono" style="font-size:13px;color:var(--color-accent)" ref="{{ hOut }}"></span></div>
+                <input type="range" min="1" max="10" step="0.5" defaultValue="{{ h }}" onInput="{{ setH }}" style="width:100%;margin-top:8px">
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline"><label style="font-size:12px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="lblDp"></label><span class="mono" style="font-size:13px;color:var(--color-accent)" ref="{{ dpOut }}"></span></div>
+                <input type="range" min="10" max="200" step="5" defaultValue="{{ dpdx }}" onInput="{{ setDp }}" style="width:100%;margin-top:8px">
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline"><label style="font-size:12px;color:color-mix(in srgb,var(--color-text) 70%,transparent)" data-i18n="lblMu"></label><span class="mono" style="font-size:13px;color:var(--color-accent)" ref="{{ muOut }}"></span></div>
+                <input type="range" min="0.5" max="5" step="0.1" defaultValue="{{ mu }}" onInput="{{ setMu }}" style="width:100%;margin-top:8px">
+              </div>
+              <div style="margin-top:auto;border-top:1px solid var(--color-divider);padding-top:14px">
+                <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 55%,transparent)" data-i18n="peakLbl"></div>
+                <div class="mono" style="font-size:26px;font-weight:600;color:var(--color-accent-700);margin-top:2px"><span ref="{{ umaxOut }}"></span><span style="font-size:14px;font-weight:400;color:color-mix(in srgb,var(--color-text) 55%,transparent)"> m/s</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin-top:8px" data-i18n="plotCaption"></p>
+      </div>
+
+      <!-- 4 -->
+      <div style="margin-top:48px">
+        <h3 style="font-size:23px;margin-bottom:10px"><span style="color:var(--color-accent);font-size:15px;margin-right:10px">4</span><span data-i18n="s4h"></span></h3>
+        <p style="max-width:66ch" data-i18n="s4intro"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq5"></figure>
+        <p style="max-width:66ch" data-i18n="s4subst"></p>
+        <figure style="border-left:3px solid var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));padding:22px 24px;margin:16px 0;overflow-x:auto;text-align:center" data-i18n="eq6"></figure>
+        <p style="max-width:66ch" data-i18n="s4across"></p>
+      </div>
+
+      <!-- 5 -->
+      <div style="margin-top:48px">
+        <h3 style="font-size:23px;margin-bottom:10px"><span style="color:var(--color-accent);font-size:15px;margin-right:10px">5</span><span data-i18n="s5h"></span></h3>
+        <p style="max-width:66ch" data-i18n="s5intro"></p>
+        <div class="blueprint" style="margin-top:18px;padding:0"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--color-divider)">
+            <span style="display:flex;gap:6px"><span style="width:9px;height:9px;border:1px solid var(--color-divider)"></span><span style="width:9px;height:9px;border:1px solid var(--color-divider)"></span><span style="width:9px;height:9px;border:1px solid var(--color-divider)"></span></span>
+            <span class="mono" style="font-size:12px;color:color-mix(in srgb,var(--color-text) 65%,transparent)">solve_tdma.py</span>
+            <span style="flex:1"></span>
+            <span class="tag tag-neutral">Python · NumPy</span>
+          </div>
+          <div ref="{{ codeRef }}" style="padding:18px 20px;overflow-x:auto"></div>
+        </div>
+      </div>
+
+      <!-- Conclusion -->
+      <div class="blueprint" style="margin-top:32px;padding:22px 24px;background:var(--color-accent-900)"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-300)" data-i18n="outcomeK"></div>
+        <p style="margin:8px 0 0;font-size:16px;line-height:1.5;color:#f2f2f3;max-width:70ch" data-i18n="outcomeT"></p>
+      </div>
+    </section>
+
+    <!-- ═══ CAPABILITIES ═══ -->
+    <section id="skills" style="padding-top:72px">
+      <div style="display:flex;align-items:baseline;gap:16px;border-top:2px solid var(--color-text);padding-top:14px;margin-bottom:8px">
+        <span style="font-family:var(--font-heading);font-size:15px;color:var(--color-accent)">02</span>
+        <h6 style="margin:0" data-i18n="capKicker"></h6>
+      </div>
+      <h2 style="font-size:36px;margin:4px 0 22px;max-width:20ch" data-i18n="capTitle"></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+
+        <div class="blueprint" style="padding:20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c1k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c1t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent)" data-i18n="c1b"></p>
+        </div>
+
+        <div class="blueprint" style="padding:20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c2k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c2t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent)" data-i18n="c2b"></p>
+        </div>
+
+        <div class="blueprint" style="padding:20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c3k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c3t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent)" data-i18n="c3b"></p>
+        </div>
+
+        <div class="blueprint" style="padding:20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c4k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c4t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent)" data-i18n="c4b"></p>
+        </div>
+
+        <div class="blueprint" style="padding:20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c5k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c5t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent)" data-i18n="c5b"></p>
+        </div>
+
+        <div class="blueprint" style="padding:20px;grid-column:span 2;min-width:0"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="card-kicker" data-i18n="c6k"></div>
+          <h4 style="margin:4px 0 6px" data-i18n="c6t"></h4>
+          <p style="margin:0;font-size:13.5px;color:color-mix(in srgb,var(--color-text) 72%,transparent);max-width:70ch" data-i18n="c6b"></p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;align-items:center">
+        <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 55%,transparent);margin-right:6px" data-i18n="portableLbl"></span>
+        <span class="tag tag-accent-2">C / C++</span>
+        <span class="tag tag-accent-2">MATLAB / Simulink</span>
+        <span class="tag tag-accent-2">NumPy</span>
+      </div>
+    </section>
+
+    <footer style="margin-top:80px;border-top:1px solid var(--color-divider);padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center">
+      <span style="font-family:var(--font-heading);font-size:16px">M. Ayoub Aichouni</span>
+      <span style="font-size:12px;color:color-mix(in srgb,var(--color-text) 55%,transparent)" data-i18n="footRole"></span>
+    </footer>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showVectors&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Plot&quot;}}">
+class Component extends DCLogic {
+  h = 5; dpdx = 50; mu = 1.0; lang = 'en';
+
+  componentDidMount() {
+    this.T = this.strings();
+    this.renderCode();
+    this.applyLang();
+    this.syncOut();
+    this.draw();
+    this._onResize = () => this.draw();
+    window.addEventListener('resize', this._onResize);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._onResize); }
+
+  // ── i18n ──────────────────────────────────────────────
+  strings() {
+    const en = {
+      role: 'Mechanical Engineer',
+      navSummary: 'Summary', navCase: 'Case study', navCap: 'Capabilities',
+      heroKicker: 'Portfolio &middot; Computational Mechanical Engineering',
+      heroTitle: 'Rigorous models, from first principles to reliable results.',
+      heroLead: 'I model how real machines behave, reduce the governing physics to something a computer can solve, and write the code that solves it. My strength is reading real-life machinery and customer requirements and translating them into engineering solutions that actually run.',
+      tag1: 'Python', tag2: 'CFD', tag3: 'Numerical methods', tag4: 'Thermal systems', tag5: 'Requirements &rarr; solutions',
+      heroNote: 'Below: one problem worked end to end &mdash; physics, math, discretisation, and a solver you can drive live &mdash; followed by an overview of the tools and methods I work with.',
+      caseKicker: 'Featured case study',
+      caseTitle: 'Computational Fluid Dynamics: 1D flow modelling in finned channels',
+      caseObjective: '<strong>Objective &mdash;</strong> establish a computational model for the velocity profile of a liquid coolant flowing between the narrow channels of a finned thermal unit, bridging analytical physics and discrete numerical methods.',
+      s1h: 'Physical scenario &amp; governing assumptions',
+      s1intro: 'We model an incompressible Newtonian fluid flowing steadily through a narrow gap of width $2h$ between two parallel cooling fins. To streamline the model for 1D computational analysis, we apply three standard assumptions:',
+      a1k: 'Assumption 01', a1t: 'Steady state', a1b: 'Flow properties are time-independent, $\\partial/\\partial t = 0$.',
+      a2k: 'Assumption 02', a2t: 'Fully developed laminar', a2b: 'The profile is constant along the flow, $\\partial u/\\partial x = 0$.',
+      a3k: 'Assumption 03', a3t: '1D flow', a3b: 'Motion is restricted to $x$: $v = 0,\\; w = 0$.',
+      s2h: 'Governing equation &mdash; Navier&ndash;Stokes reduction',
+      s2intro: 'Under these assumptions the full x-momentum equation collapses. Convective terms and gravity vanish, leaving a balance between the pressure gradient and viscous shear:',
+      s2rearr: 'Rearranging isolates the second derivative of velocity:',
+      s2where: '<em>Where $\\mu$ is dynamic viscosity, $u$ is velocity, and $dP/dx$ is the pressure gradient.</em>',
+      s3h: 'The analytical solution',
+      s3intro: 'Integrating the reduced equation twice with respect to $y$ yields:',
+      s3apply: 'Applying the no-slip boundary conditions at the fin walls ($u(h)=0$, $u(-h)=0$) resolves the constants, giving the exact parabolic velocity profile:',
+      plotTitle: 'Live solver &mdash; parabolic velocity profile', plotTag: 'interactive',
+      lblH: 'Channel half-width $h$', lblDp: 'Pressure gradient $|dP/dx|$', lblMu: 'Dynamic viscosity $\\mu$',
+      peakLbl: 'Peak velocity (centreline)',
+      plotCaption: 'The curve is $u(y)$ solved live from the closed-form solution &mdash; drag the sliders to see how geometry and flow conditions reshape the profile and peak velocity.',
+      s4h: 'Numerical discretisation for the solver',
+      s4intro: 'To solve this on a computer we discretise the domain into nodes spaced $\\Delta y$ apart and approximate the second derivative with the central-difference scheme of the finite-difference method:',
+      s4subst: 'Substituting this into the reduced momentum balance yields the algebraic equation enforced at every interior node:',
+      s4across: 'Across $n$ nodes this assembles into a tridiagonal system $Ax = b$, solvable in $O(n)$ time with the Thomas algorithm &mdash; far cheaper than a general matrix solve.',
+      s5h: 'Implementation &mdash; Thomas algorithm (TDMA)',
+      s5intro: 'The solver below builds the tridiagonal system, enforces the no-slip boundaries, and sweeps it in linear time. The matrix operations are deliberately plain &mdash; they migrate cleanly to C/C++ or MATLAB/Simulink for high-performance pipelines.',
+      outcomeK: 'Outcome',
+      outcomeT: 'Wrapped in an automation loop, this efficient solver can sweep thousands of fin widths and pressure gradients &mdash; turning a single physics derivation into a tool for optimising real thermal-unit geometries.',
+      capKicker: 'What I can work with', capTitle: 'Capabilities &amp; toolkit',
+      c1k: 'Language', c1t: 'Python', c1b: 'Scientific computing with NumPy, solver implementation, and automation loops that turn one model into thousands of simulated cases.',
+      c2k: 'Domain', c2t: 'CFD', c2b: 'Reducing Navier&ndash;Stokes to tractable models, handling laminar flow, boundary conditions, and geometry-driven behaviour.',
+      c3k: 'Method', c3t: 'Numerical methods', c3b: 'Understanding &amp; hand-calculation of discretisation schemes &mdash; finite differences, tridiagonal / Thomas solves, stability and convergence.',
+      c4k: 'Domain', c4t: 'Thermal systems', c4b: 'Heat transfer in finned units and coolant channels, and using models to optimise geometry for thermal performance.',
+      c5k: 'Delivery', c5t: 'Custom tools &amp; documentation', c5b: 'Custom-built tools like this page &mdash; interactive visual representations paired with clear technical documentation, tailored to two audiences: engineers internally and customers externally, with multilingual delivery.',
+      c6k: 'The core skill', c6t: 'Requirements &rarr; engineering solutions', c6b: 'The ability to understand real-life machinery and customer requirements and translate them into solutions &mdash; from a physical problem on the shop floor, to the governing physics, to code that delivers an answer and scales to the next question.',
+      portableLbl: 'Also portable to',
+      footRole: 'Mechanical Engineer &mdash; computational modelling, thermal systems, numerical methods',
+      eq1: '$$ 0 = -\\frac{dP}{dx} + \\mu \\frac{d^2 u}{dy^2} $$',
+      eq2: '$$ \\frac{d^2 u}{dy^2} = \\frac{1}{\\mu}\\frac{dP}{dx} $$',
+      eq3: '$$ u(y) = \\frac{1}{2\\mu}\\frac{dP}{dx}\\,y^2 + C_1 y + C_2 $$',
+      eq4: '$$ u(y) = -\\frac{1}{2\\mu}\\frac{dP}{dx}\\,(h^2 - y^2) $$',
+      eq5: '$$ \\frac{d^2 u}{dy^2} \\approx \\frac{u_{i+1} - 2u_i + u_{i-1}}{\\Delta y^2} $$',
+      eq6: '$$ u_{i-1} - 2u_i + u_{i+1} = \\frac{\\Delta y^2}{\\mu}\\frac{dP}{dx} $$',
+    };
+    const de = Object.assign({}, en, {
+      role: 'Maschinenbauingenieur',
+      navSummary: '&Uuml;bersicht', navCase: 'Fallstudie', navCap: 'F&auml;higkeiten',
+      heroKicker: 'Portfolio &middot; Computergest&uuml;tzter Maschinenbau',
+      heroTitle: 'Fundierte Modelle &ndash; von den Grundprinzipien zu verl&auml;sslichen Ergebnissen.',
+      heroLead: 'Ich modelliere das Verhalten realer Maschinen, reduziere die zugrunde liegende Physik auf ein computerl&ouml;sbares Problem und schreibe den Code, der es l&ouml;st. Meine St&auml;rke ist es, reale Maschinen und Kundenanforderungen zu verstehen und in Engineering-L&ouml;sungen zu &uuml;bersetzen, die tats&auml;chlich funktionieren.',
+      tag3: 'Numerische Methoden', tag4: 'Thermische Systeme', tag5: 'Anforderungen &rarr; L&ouml;sungen',
+      heroNote: 'Nachfolgend: ein Problem vollst&auml;ndig durchgearbeitet &mdash; Physik, Mathematik, Diskretisierung und ein Solver, den Sie live steuern k&ouml;nnen &mdash; gefolgt von einem &Uuml;berblick &uuml;ber die Werkzeuge und Methoden, mit denen ich arbeite.',
+      caseKicker: 'Ausgew&auml;hlte Fallstudie',
+      caseTitle: 'Numerische Str&ouml;mungsmechanik: 1D-Str&ouml;mungsmodellierung in Rippenkan&auml;len',
+      caseObjective: '<strong>Ziel &mdash;</strong> ein Rechenmodell f&uuml;r das Geschwindigkeitsprofil eines fl&uuml;ssigen K&uuml;hlmittels aufstellen, das zwischen den schmalen Kan&auml;len einer berippten thermischen Einheit str&ouml;mt &mdash; als Br&uuml;cke zwischen analytischer Physik und diskreten numerischen Methoden.',
+      s1h: 'Physikalisches Szenario &amp; Annahmen',
+      s1intro: 'Wir modellieren ein inkompressibles Newtonsches Fluid, das station&auml;r durch einen schmalen Spalt der Breite $2h$ zwischen zwei parallelen K&uuml;hlrippen str&ouml;mt. Um das Modell f&uuml;r die 1D-Analyse zu vereinfachen, treffen wir drei Standardannahmen:',
+      a1k: 'Annahme 01', a1t: 'Station&auml;r', a1b: 'Str&ouml;mungsgr&ouml;&szlig;en sind zeitunabh&auml;ngig, $\\partial/\\partial t = 0$.',
+      a2k: 'Annahme 02', a2t: 'Voll ausgebildet laminar', a2b: 'Das Profil ist entlang der Str&ouml;mung konstant, $\\partial u/\\partial x = 0$.',
+      a3k: 'Annahme 03', a3t: '1D-Str&ouml;mung', a3b: 'Die Bewegung ist auf $x$ beschr&auml;nkt: $v = 0,\\; w = 0$.',
+      s2h: 'Grundgleichung &mdash; Reduktion der Navier&ndash;Stokes-Gleichung',
+      s2intro: 'Unter diesen Annahmen vereinfacht sich die vollst&auml;ndige x-Impulsgleichung. Konvektionsterme und Schwerkraft entfallen, sodass ein Gleichgewicht zwischen Druckgradient und viskoser Schubspannung verbleibt:',
+      s2rearr: 'Umstellen isoliert die zweite Ableitung der Geschwindigkeit:',
+      s2where: '<em>Dabei ist $\\mu$ die dynamische Viskosit&auml;t, $u$ die Geschwindigkeit und $dP/dx$ der Druckgradient.</em>',
+      s3h: 'Die analytische L&ouml;sung',
+      s3intro: 'Zweimalige Integration der reduzierten Gleichung nach $y$ ergibt:',
+      s3apply: 'Das Anwenden der Haftbedingung an den Rippenw&auml;nden ($u(h)=0$, $u(-h)=0$) bestimmt die Konstanten und ergibt das exakte parabolische Geschwindigkeitsprofil:',
+      plotTitle: 'Live-Solver &mdash; parabolisches Geschwindigkeitsprofil', plotTag: 'interaktiv',
+      lblH: 'Kanal-Halbbreite $h$', lblDp: 'Druckgradient $|dP/dx|$', lblMu: 'Dynamische Viskosit&auml;t $\\mu$',
+      peakLbl: 'Spitzengeschwindigkeit (Mittellinie)',
+      plotCaption: 'Die Kurve ist $u(y)$, live aus der geschlossenen L&ouml;sung berechnet &mdash; ziehen Sie die Regler, um zu sehen, wie Geometrie und Str&ouml;mungsbedingungen Profil und Spitzengeschwindigkeit ver&auml;ndern.',
+      s4h: 'Numerische Diskretisierung f&uuml;r den Solver',
+      s4intro: 'Zur L&ouml;sung am Computer diskretisieren wir das Gebiet in Knoten im Abstand $\\Delta y$ und n&auml;hern die zweite Ableitung mit dem zentralen Differenzenschema der Finite-Differenzen-Methode:',
+      s4subst: 'Eingesetzt in die reduzierte Impulsbilanz ergibt sich die algebraische Gleichung, die an jedem inneren Knoten gilt:',
+      s4across: '&Uuml;ber $n$ Knoten ergibt sich ein tridiagonales System $Ax = b$, das in $O(n)$-Zeit mit dem Thomas-Algorithmus l&ouml;sbar ist &mdash; weit g&uuml;nstiger als ein allgemeines Matrixverfahren.',
+      s5h: 'Implementierung &mdash; Thomas-Algorithmus (TDMA)',
+      s5intro: 'Der folgende Solver baut das tridiagonale System auf, erzwingt die Haftbedingungen und l&ouml;st es in linearer Zeit. Die Matrixoperationen sind bewusst schlicht gehalten &mdash; sie lassen sich sauber nach C/C++ oder MATLAB/Simulink f&uuml;r Hochleistungs-Pipelines &uuml;bertragen.',
+      outcomeK: 'Ergebnis',
+      outcomeT: 'In eine Automatisierungsschleife eingebettet, kann dieser effiziente Solver tausende Rippenbreiten und Druckgradienten durchlaufen &mdash; und macht aus einer einzelnen physikalischen Herleitung ein Werkzeug zur Optimierung realer Geometrien thermischer Einheiten.',
+      capKicker: 'Womit ich arbeiten kann', capTitle: 'F&auml;higkeiten &amp; Werkzeuge',
+      c1k: 'Sprache', c1b: 'Wissenschaftliches Rechnen mit NumPy, Solver-Implementierung und Automatisierungsschleifen, die aus einem Modell tausende simulierte F&auml;lle machen.',
+      c2k: 'Fachgebiet', c2b: 'Reduktion der Navier&ndash;Stokes-Gleichungen auf handhabbare Modelle, laminare Str&ouml;mung, Randbedingungen und geometrieabh&auml;ngiges Verhalten.',
+      c3k: 'Methode', c3t: 'Numerische Methoden', c3b: 'Verst&auml;ndnis &amp; Handrechnung von Diskretisierungsverfahren &mdash; finite Differenzen, Tridiagonal-/Thomas-Verfahren, Stabilit&auml;t und Konvergenz.',
+      c4k: 'Fachgebiet', c4t: 'Thermische Systeme', c4b: 'W&auml;rme&uuml;bertragung in Rippenk&ouml;rpern und K&uuml;hlkan&auml;len sowie Modelle zur Optimierung der Geometrie f&uuml;r die thermische Leistung.',
+      c5k: 'Aufbereitung', c5t: 'Individuelle Tools &amp; Dokumentation', c5b: 'Ma&szlig;geschneiderte Tools wie diese Seite &mdash; interaktive visuelle Darstellungen kombiniert mit klarer technischer Dokumentation, zugeschnitten auf zwei Zielgruppen: Ingenieure intern und Kunden extern, mit mehrsprachiger Bereitstellung.',
+      c6k: 'Die Kernkompetenz', c6t: 'Anforderungen &rarr; Engineering-L&ouml;sungen', c6b: 'Die F&auml;higkeit, reale Maschinen und Kundenanforderungen zu verstehen und in L&ouml;sungen zu &uuml;bersetzen &mdash; vom physikalischen Problem in der Fertigung &uuml;ber die zugrunde liegende Physik bis zum Code, der eine Antwort liefert und zur n&auml;chsten Fragestellung skaliert.',
+      portableLbl: 'Ebenfalls portierbar nach',
+      footRole: 'Maschinenbauingenieur &mdash; computergest&uuml;tzte Modellierung, thermische Systeme, numerische Methoden',
+    });
+    return { en, de };
+  }
+
+  applyLang() {
+    const dict = this.T[this.lang];
+    const root = this.root || document;
+    root.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    if (this.langBtn) this.langBtn.textContent = this.lang === 'en' ? 'DE' : 'EN';
+    document.documentElement.lang = this.lang;
+    this.typeset();
+  }
+
+  typeset() {
+    const root = this.root;
+    const run = () => requestAnimationFrame(() => {
+      const arg = root ? [root] : undefined;
+      window.MathJax.typesetPromise(arg).catch(() => {});
+    });
+    const wait = () => {
+      const MJ = window.MathJax;
+      if (MJ && MJ.startup && MJ.startup.promise) MJ.startup.promise.then(run);
+      else if (MJ && MJ.typesetPromise) run();
+      else setTimeout(wait, 100);
+    };
+    wait();
+  }
+
+  toggle = () => { this.lang = this.lang === 'en' ? 'de' : 'en'; this.applyLang(); };
+
+  // ── plot (fully imperative, no setState → single render) ──
+  fmt(n) { return (Math.round(n * 100) / 100).toString(); }
+  syncOut() {
+    if (this.hOutEl) this.hOutEl.textContent = this.fmt(this.h) + ' mm';
+    if (this.dpOutEl) this.dpOutEl.textContent = this.fmt(this.dpdx) + ' Pa/m';
+    if (this.muOutEl) this.muOutEl.textContent = this.fmt(this.mu) + ' mPa\u00b7s';
+    if (this.umaxOutEl) {
+      const umax = Math.abs(this.dpdx) * Math.pow(this.h / 1000, 2) / (2 * (this.mu / 1000));
+      this.umaxOutEl.textContent = umax.toFixed(3);
+    }
+  }
+  setH = (e) => { this.h = parseFloat(e.target.value); this.syncOut(); this.draw(); };
+  setDp = (e) => { this.dpdx = parseFloat(e.target.value); this.syncOut(); this.draw(); };
+  setMu = (e) => { this.mu = parseFloat(e.target.value); this.syncOut(); this.draw(); };
+
+  rootRef = (el) => { this.root = el; };
+  langBtnRef = (el) => { this.langBtn = el; };
+  hOut = (el) => { this.hOutEl = el; this.syncOut(); };
+  dpOut = (el) => { this.dpOutEl = el; this.syncOut(); };
+  muOut = (el) => { this.muOutEl = el; this.syncOut(); };
+  umaxOut = (el) => { this.umaxOutEl = el; this.syncOut(); };
+  canvasRef = (el) => { this.canvas = el; if (el) requestAnimationFrame(() => this.draw()); };
+  codeRef = (el) => { this.code = el; if (el) this.renderCode(); };
+
+  renderCode() {
+    const el = this.code;
+    if (!el) return;
+    const src = [
+      ['c','import numpy as np'],
+      ['',''],
+      ['k','def ','f','solve_tdma','p','(a, b, c, d):'],
+      ['s','    """Solve a tridiagonal system Ax = d via the Thomas algorithm."""'],
+      ['n','    n = len(d)'],
+      ['n','    w = np.zeros(n-1, float)'],
+      ['n','    g = np.zeros(n, float)'],
+      ['n','    u = np.zeros(n, float)'],
+      ['',''],
+      ['c','    # forward sweep'],
+      ['n','    w[0] = c[0] / b[0]'],
+      ['n','    g[0] = d[0] / b[0]'],
+      ['k','    for ','n','i ','k','in ','f','range','p','(1, n-1):'],
+      ['n','        w[i] = c[i] / (b[i] - a[i-1] * w[i-1])'],
+      ['k','    for ','n','i ','k','in ','f','range','p','(1, n):'],
+      ['n','        g[i] = (d[i] - a[i-1] * g[i-1]) / (b[i] - a[i-1] * w[i-1])'],
+      ['',''],
+      ['c','    # back substitution'],
+      ['n','    u[n-1] = g[n-1]'],
+      ['k','    for ','n','i ','k','in ','f','range','p','(n-1, 0, -1):'],
+      ['n','        u[i-1] = g[i-1] - w[i-1] * u[i]'],
+      ['k','    return ','n','u'],
+      ['',''],
+      ['c','# --- physical setup ---'],
+      ['n','nodes = 50           ','c','# discrete grid points'],
+      ['n','h     = 0.005        ','c','# channel half-width (5 mm)'],
+      ['n','mu    = 0.001        ','c','# dynamic viscosity (Pa.s)'],
+      ['n','dp_dx = -50.0        ','c','# pressure gradient (Pa/m)'],
+      ['',''],
+      ['n','y  = np.linspace(-h, h, nodes)'],
+      ['n','dy = y[1] - y[0]'],
+      ['',''],
+      ['c','# --- matrix construction ---'],
+      ['n','a = np.ones(nodes - 1)'],
+      ['n','b = -2.0 * np.ones(nodes)'],
+      ['n','c = np.ones(nodes - 1)'],
+      ['n','d = np.ones(nodes) * (dy**2 / mu) * dp_dx'],
+      ['',''],
+      ['c','# no-slip walls'],
+      ['n','b[0] = 1.0;  c[0] = 0.0;  d[0] = 0.0'],
+      ['n','b[-1] = 1.0; a[-1] = 0.0; d[-1] = 0.0'],
+      ['',''],
+      ['c','# --- execution ---'],
+      ['n','velocity_profile = solve_tdma(a, b, c, d)'],
+    ];
+    const col = { c:'#7a7a7d', s:'#597ea3', k:'#2c455d', f:'#416180', p:'#5d5d60', n:'#1d1f20' };
+    const frag = document.createDocumentFragment();
+    src.forEach(tokens => {
+      if (tokens.length === 2 && tokens[0] === '' && tokens[1] === '') { frag.appendChild(document.createElement('br')); return; }
+      const line = document.createElement('div');
+      line.style.whiteSpace = 'pre';
+      for (let i = 0; i < tokens.length; i += 2) {
+        const span = document.createElement('span');
+        span.style.color = col[tokens[i]] || col.n;
+        if (tokens[i] === 'k' || tokens[i] === 'f') span.style.fontWeight = '600';
+        span.textContent = tokens[i + 1];
+        line.appendChild(span);
+      }
+      frag.appendChild(line);
+    });
+    el.innerHTML = '';
+    el.style.fontFamily = 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+    el.style.fontSize = '12.5px';
+    el.style.lineHeight = '1.65';
+    el.appendChild(frag);
+  }
+
+  draw() {
+    const cv = this.canvas;
+    if (!cv) return;
+    const dpr = window.devicePixelRatio || 1;
+    const rect = cv.getBoundingClientRect();
+    const W = rect.width || 520, H = rect.height || 300;
+    cv.width = W * dpr; cv.height = H * dpr;
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+
+    const accent = '#5980a6', accent7 = '#416180', ink = '#1d1f20';
+    const div = 'rgba(29,31,32,0.16)';
+    const mL = 44, mR = 20, mT = 20, mB = 34;
+    const pw = W - mL - mR, ph = H - mT - mB;
+    const cx = mL, cy = mT + ph / 2;
+    const refHalf = 10;
+    const hpx = (this.h / refHalf) * (ph / 2) * 0.92;
+
+    const h = this.h / 1000, mu = this.mu / 1000, dp = -Math.abs(this.dpdx);
+    const umax = -1 / (2 * mu) * dp * (h * h);
+    const xMax = cx + pw * 0.82;
+
+    ctx.strokeStyle = 'rgba(29,31,32,0.06)'; ctx.lineWidth = 1;
+    for (let i = 0; i <= 8; i++) { const gx = cx + (pw * 0.82) * i / 8; ctx.beginPath(); ctx.moveTo(gx, mT); ctx.lineTo(gx, mT + ph); ctx.stroke(); }
+
+    const drawWall = (yy) => {
+      ctx.strokeStyle = ink; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(cx, yy); ctx.lineTo(xMax + 6, yy); ctx.stroke();
+      ctx.strokeStyle = 'rgba(29,31,32,0.5)'; ctx.lineWidth = 1;
+      const dir = yy < cy ? -1 : 1;
+      for (let x = cx; x < xMax + 6; x += 9) { ctx.beginPath(); ctx.moveTo(x, yy); ctx.lineTo(x + 7, yy + dir * 7); ctx.stroke(); }
+    };
+    drawWall(cy - hpx); drawWall(cy + hpx);
+
+    ctx.strokeStyle = div; ctx.setLineDash([4, 4]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(xMax + 6, cy); ctx.stroke(); ctx.setLineDash([]);
+
+    ctx.strokeStyle = ink; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx, cy - hpx - 4); ctx.lineTo(cx, cy + hpx + 4); ctx.stroke();
+
+    const N = 80;
+    const pts = [];
+    for (let i = 0; i <= N; i++) {
+      const yc = -h + (2 * h) * i / N;
+      const u = umax * (1 - (yc / h) * (yc / h));
+      const px = cx + (u / umax) * (pw * 0.82);
+      const py = cy - (yc / (this.h / 1000)) * hpx;
+      pts.push([px, py]);
+    }
+    ctx.beginPath(); ctx.moveTo(cx, pts[0][1]);
+    pts.forEach(p => ctx.lineTo(p[0], p[1]));
+    ctx.lineTo(cx, pts[pts.length - 1][1]); ctx.closePath();
+    ctx.fillStyle = 'rgba(89,128,166,0.14)'; ctx.fill();
+
+    if (this.props.showVectors ?? true) {
+      ctx.strokeStyle = accent; ctx.lineWidth = 1;
+      for (let i = 6; i < N; i += 8) {
+        const p = pts[i];
+        ctx.beginPath(); ctx.moveTo(cx, p[1]); ctx.lineTo(p[0], p[1]); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.lineTo(p[0] - 5, p[1] - 3); ctx.lineTo(p[0] - 5, p[1] + 3); ctx.closePath();
+        ctx.fillStyle = accent; ctx.fill();
+      }
+    }
+
+    ctx.strokeStyle = accent7; ctx.lineWidth = 2.5;
+    ctx.beginPath(); pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke();
+
+    ctx.fillStyle = 'rgba(29,31,32,0.6)'; ctx.font = '10px Barlow, sans-serif';
+    ctx.save(); ctx.translate(12, cy); ctx.rotate(-Math.PI / 2);
+    ctx.textAlign = 'center'; ctx.fillText(this.lang === 'de' ? 'Kanalposition  y' : 'channel position  y', 0, 0); ctx.restore();
+    ctx.textAlign = 'center'; ctx.fillText((this.lang === 'de' ? 'Geschwindigkeit  u(y)  ' : 'velocity  u(y)  ') + '\u2192', mL + (pw * 0.82) / 2, H - 8);
+    ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(29,31,32,0.45)';
+    ctx.fillText(this.lang === 'de' ? 'Rippenwand (Haftbedingung)' : 'fin wall (no-slip)', cx + 4, cy - hpx - 6);
+  }
+
+  renderVals() {
+    return {
+      h: this.h, mu: this.mu, dpdx: this.dpdx,
+      setH: this.setH, setDp: this.setDp, setMu: this.setMu,
+      toggle: this.toggle,
+      rootRef: this.rootRef, langBtnRef: this.langBtnRef,
+      hOut: this.hOut, dpOut: this.dpOut, muOut: this.muOut, umaxOut: this.umaxOut,
+      canvasRef: this.canvasRef, codeRef: this.codeRef,
+    };
+  }
+}
+</script>
+</body>
+</html>

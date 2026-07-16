@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFD 1D Flow Modeling in Finned Channels</title>
+    <!-- MathJax for rendering LaTeX equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$', '$$']]
+          }
+        };
+    </script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 850px; 
+            margin: 40px auto; 
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 { 
+            color: #2c3e50; 
+            border-bottom: 3px solid #3498db; 
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 { 
+            color: #2980b9; 
+            margin-top: 35px; 
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+        }
+        p { 
+            margin-bottom: 15px; 
+            font-size: 1.05em;
+        }
+        ol {
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        pre { 
+            background-color: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 6px; 
+            overflow-x: auto; 
+            border: 1px solid #e9ecef; 
+        }
+        code { 
+            font-family: 'Consolas', 'Courier New', Courier, monospace; 
+            color: #e83e8c; 
+        }
+        pre code { 
+            color: #212529; 
+            font-size: 0.95em;
+        }
+        .math-display { 
+            overflow-x: auto; 
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fcfcfc;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>Computational Fluid Dynamics: 1D Flow Modeling in Finned Channels</h1>
+    
+    <p><strong>Objective:</strong> To establish a computational model for the velocity profile of a liquid coolant flowing between the narrow channels of a finned thermal unit, bridging analytical physics and discrete numerical methods.</p>
+    
+    <h2>1. Physical Scenario and Governing Assumptions</h2>
+    <p>We model an incompressible Newtonian fluid flowing steadily through a narrow gap of width $2h$ between two parallel cooling fins. To streamline the mathematical model for 1D computational analysis, we apply the following standard assumptions:</p>
+    <ol>
+        <li><strong>Steady State:</strong> Flow properties are time-independent ($\partial / \partial t = 0$).</li>
+        <li><strong>Fully Developed Laminar Flow:</strong> The velocity profile remains constant along the flow direction ($\partial u / \partial x = 0$).</li>
+        <li><strong>1D Flow:</strong> Fluid motion is restricted to the x-direction ($v = 0, w = 0$).</li>
+    </ol>
+
+    <h2>2. Governing Equation (Navier-Stokes Reduction)</h2>
+    <p>The full Navier-Stokes momentum equation for the x-direction simplifies significantly under these assumptions. Convective terms and gravity become negligible, leaving a balance between the pressure gradient and viscous shear forces:</p>
+    
+    <div class="math-display">
+        $$ 0 = -\frac{dP}{dx} + \mu \frac{d^2 u}{dy^2} $$
+    </div>
+    
+    <p>Rearranging isolates the second derivative of velocity:</p>
+    
+    <div class="math-display">
+        $$ \frac{d^2 u}{dy^2} = \frac{1}{\mu} \frac{dP}{dx} $$
+    </div>
+    
+    <p><em>(Where $\mu$ is dynamic viscosity, $u$ is velocity, and $dP/dx$ is the pressure drop).</em></p>
+
+    <h2>3. The Analytical Solution</h2>
+    <p>Integrating the simplified differential equation twice with respect to $y$ yields:</p>
+    <div class="math-display">
+        $$ u(y) = \frac{1}{2\mu} \frac{dP}{dx} y^2 + C_1 y + C_2 $$
+    </div>
+    
+    <p>Applying the <strong>no-slip boundary conditions</strong> at the fin walls ($u(h) = 0$ and $u(-h) = 0$) allows us to solve for the constants, resulting in the exact parabolic velocity profile:</p>
+    
+    <div class="math-display">
+        $$ u(y) = -\frac{1}{2\mu} \frac{dP}{dx} (h^2 - y^2) $$
+    </div>
+
+    <h2>4. Numerical Discretization for the Solver</h2>
+    <p>To implement this computationally, we discretize the fluid domain into a grid of nodes with spacing $\Delta y$. Using the <strong>Central Difference scheme</strong> of the Finite Difference Method, the second derivative is approximated as:</p>
+    
+    <div class="math-display">
+        $$ \frac{d^2 u}{dy^2} \approx \frac{u_{i+1} - 2u_i + u_{i-1}}{\Delta y^2} $$
+    </div>
+    
+    <p>Substituting this into the Navier-Stokes reduction yields the algebraic equation for each node:</p>
+    
+    <div class="math-display">
+        $$ u_{i-1} - 2u_i + u_{i+1} = \frac{\Delta y^2}{\mu} \frac{dP}{dx} $$
+    </div>
+    
+    <p>When applied across $n$ nodes, this forms a Tridiagonal Matrix system ($Ax = b$), which can be solved with $O(n)$ efficiency using the Thomas Algorithm.</p>
+    
+    <h2>5. Implementation (Thomas Algorithm / TDMA)</h2>
+    <p>The following script demonstrates the solver implementation. The underlying matrix operations are straightforward and can be easily migrated to C/C++ or MATLAB/Simulink for high-performance simulation pipelines.</p>
+    
+    <pre><code class="language-python">import numpy as np
+
+def solve_tdma(a, b, c, d):
+    """
+    Solves a tridiagonal matrix system Ax = d using the Thomas Algorithm.
+    """
+    n = len(d)
+    w = np.zeros(n-1, float)
+    g = np.zeros(n, float)
+    u = np.zeros(n, float)
+    
+    # Forward sweep
+    w[0] = c[0] / b[0]
+    g[0] = d[0] / b[0]
+    
+    for i in range(1, n-1):
+        w[i] = c[i] / (b[i] - a[i-1] * w[i-1])
+    for i in range(1, n):
+        g[i] = (d[i] - a[i-1] * g[i-1]) / (b[i] - a[i-1] * w[i-1])
+        
+    # Back substitution
+    u[n-1] = g[n-1]
+    for i in range(n-1, 0, -1):
+        u[i-1] = g[i-1] - w[i-1] * u[i]
+        
+    return u
+
+# --- Physical Setup ---
+nodes = 50           # Number of discrete grid points
+h = 0.005            # Half-width of the channel (5 mm)
+mu = 0.001           # Dynamic viscosity (Pa.s)
+dp_dx = -50.0        # Pressure gradient (Pa/m)
+
+# Create spatial grid
+y = np.linspace(-h, h, nodes)
+dy = y[1] - y[0]
+
+# --- Matrix Construction ---
+a = np.ones(nodes - 1)                                
+b = -2.0 * np.ones(nodes)                             
+c = np.ones(nodes - 1)                                
+d = np.ones(nodes) * (dy**2 / mu) * dp_dx             
+
+# Enforce Boundary Conditions (No-slip at walls)
+b[0] = 1.0; c[0] = 0.0; d[0] = 0.0                    
+b[-1] = 1.0; a[-1] = 0.0; d[-1] = 0.0                 
+
+# --- Execution ---
+velocity_profile = solve_tdma(a, b, c, d)
+</code></pre>
+    
+    <p><strong>Conclusion:</strong> By wrapping this highly efficient computational solver into an automation loop or larger architecture, it becomes possible to rapidly simulate thousands of different fin widths or pressure gradients to optimize system geometries for thermal performance.</p>
+</body>
+</html>
